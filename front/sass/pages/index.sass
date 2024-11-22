@@ -1,0 +1,795 @@
+$magenta: #FF267E
+$green: #05C48A
+$green-hover: #05b37c
+$blue: #000055
+$white: #FFFFFF
+$light-grey: #F2F2F2
+$grey: #d9d9d966
+$violet: #ff267e33
+
+
+$font-suisse-medium: SuisseIntl-Medium, sans-serif // 500 //
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif // 600 //
+$font-a_LCDNova: a_LCDNova, sans-serif // 400 //
+
+.overflow
+  overflow-x: hidden !important
+
+body
+  background: $blue
+  overscroll-behavior: none
+  &._lock
+    overflow: hidden
+  img
+    max-width: 100%
+    height: auto
+.contest
+  display: flex
+  flex-direction: column
+  &__intro
+    width: 100%
+    height: auto
+    //aspect-ratio: 16 / 9
+    padding-top: 56.7%
+    position: relative
+    background: url("../img/title-desk.jpg") no-repeat 0 0/cover
+    @media screen and (max-width: 1366px)
+      background: url("../img/title-desk-s.jpg") no-repeat 0 0/cover
+    @media screen and (max-width: 1024px)
+      background: url('../img/title-tab.jpg') no-repeat 0 0/cover
+    @media screen and (max-width: 768px)
+      background: url('../img/title-tab-s.jpg') no-repeat 0 0/cover
+    @media screen and (max-width: 500px)
+      background: url('../img/title-mob.jpg') no-repeat 0 0/cover
+  &__btn
+    background-color: $green
+    border-radius: 6px
+    min-width: 470px
+    max-width: 470px
+    min-height: 70px
+    display: flex
+    justify-content: center
+    align-items: center
+    box-shadow: 0 0 10px 0.95px #07FFDA
+    &.intro-btn
+      position: absolute
+      bottom: 69px
+      right: 122px
+    &-cont
+      font-size: 28px
+      font-family: $font-suisse-semb
+      letter-spacing: 2.24px
+      text-transform: uppercase
+      color: $blue
+      border-radius: 4px
+      border: 2px solid #FFF
+      padding: 12px 88px 11px
+      width: 458px
+      height: 60px
+      text-align: center
+    &:hover
+      background-color: $green-hover
+  &__experience
+    background-color: $light-grey
+    position: relative
+    width: 100%
+    height: auto
+    padding-top: 53%
+    z-index: 1
+    &-wrapper
+      position: absolute
+      top: 49px
+      width: calc(100% - 120px)
+      //height: 1050px
+      aspect-ratio: 1.71
+      height: auto
+      //padding-top: 56%
+      z-index: 1
+      border-radius: 15px
+      overflow: hidden
+      left: 50%
+      transform: translateX(-50%)
+      box-shadow: 6px 6px 13.4px 0px rgba(0, 0, 0, 0.25)
+    &-container
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      //padding: 60px 0 71px 82px
+      padding: 3.5% 0 3% 4%
+      height: 100%
+    &-block
+      height: calc(100% - 80px)
+      background: url("../img/boy-right-desk.jpg") no-repeat 100% 0/cover
+      @media screen and (max-width: 1366px)
+        background: url("../img/boy-right-desk-s.jpg") no-repeat 100% 100%/cover
+      @media screen and (max-width: 1024px)
+        background: url('../img/boy-right-tab.jpg') no-repeat 100% 100%/cover
+      @media screen and (max-width: 768px)
+        background: url('../img/boy-right-tab-s.jpg') no-repeat 100% 100%/cover
+      @media screen and (max-width: 500px)
+        background: url('../img/boy-right-mob.jpg') no-repeat 100% 100%/cover
+      .experience
+        &-top
+          font-family: $font-suisse-semb
+          font-size: 20px
+          color: $blue
+          letter-spacing: 1.6px
+          width: 641px
+        &-img
+          max-width: 1040px
+          display: block
+          margin-left: -26px
+          width: 62%
+        &-bottom
+          color: $blue
+          font-family: $font-suisse-semb
+          //font-size: 48px
+          font-size: 2.5vw
+          line-height: 50.4px
+          letter-spacing: 2.4px
+          text-transform: uppercase
+          width: 59%
+  &__title
+    background-color: $blue
+    width: 100%
+    height: 80px
+    color: $magenta
+    font-family: $font-suisse-semb
+    font-size: 40px
+    line-height: 74px
+    letter-spacing: 0.8px
+    text-transform: uppercase
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    z-index: 1
+    &::after,
+    &::before
+      content: ""
+      position: absolute
+      bottom: 21px
+      background: url('../img/favbet-icon.svg') no-repeat 0 0/cover
+      width: 49px
+      height: 38px
+    &::before
+      left: 76px
+    &::after
+      right: 76px
+    &.title-transp
+      background-color: transparent
+  &__instructions
+    width: 88%
+    margin: 125px auto 235px
+    position: relative
+    &-wrapper
+      width: 100%
+      height: 323px
+      border-radius: 1861px
+      background: $magenta
+      filter: blur(350px)
+      z-index: -1
+      position: absolute
+      top: 30%
+    .title-transp
+      &::before
+        left: 15px
+      &::after
+        right: 15px
+    &-tickets
+      margin-top: 40px
+      display: flex
+      justify-content: space-between
+      position: relative
+      &::before
+        content: ""
+        position: absolute
+        background-color: $magenta
+        width: 1000px
+        height: 4px
+        top: 50%
+        left: 20%
+        z-index: -1
+      .ticket
+        &__item
+          width: 394px
+          height: 601px
+          &:nth-child(1)
+            background: url('../img/ticket-left-desk.png') no-repeat 0 0/cover
+          &:nth-child(2)
+            background: url('../img/ticket-center-desk.png') no-repeat 0 0/cover
+            .ticket__item-center
+              padding: 54px 75px 0
+          &:nth-child(3)
+            background: url('../img/ticket-right-desk.png') no-repeat 0 0/cover
+          &-top
+            font-family: $font-suisse-semb
+            font-size: 24px
+            line-height: 26px
+            letter-spacing: 0.72px
+            text-transform: uppercase
+            color: $white
+            padding: 36px 38px 45px
+            text-align: center
+            max-height: 133px
+          &-center
+            color: $blue
+            font-family: $font-suisse-medium
+            font-size: 18px
+            letter-spacing: 1.44px
+            padding: 54px 67px 0
+            text-align: center
+            line-height: 19px
+    .instructions-btn
+      margin: 30px auto 30px
+  &__leaderboard
+    background-color: $white
+    height: auto
+    padding-top: 35%
+    width: 100%
+    position: relative
+    .results
+      position: absolute
+      width: 94%
+      height: auto
+      overflow: hidden
+      border-radius: 15px
+      top: -200px
+      left: 50%
+      transform: translateX(-50%)
+      box-shadow: 6px 6px 13.4px 0px rgba(0, 0, 0, 0.25)
+      .title
+        &-leaderboard
+          background-color: $magenta
+          color: $blue
+          height: 66px
+          &::before,
+          &::after
+            bottom: 16px
+            background: url('../img/favbet-icon-blue.svg') no-repeat 0 0/cover
+      &__wrapp
+        display: flex
+        flex-direction: column
+        aspect-ratio: 2.6
+        background: url("../img/boy-left-desk.jpg") no-repeat 0% 0/contain
+        @media screen and (max-width: 1366px)
+          background: url("../img/boy-left-desk-s.jpg") no-repeat 100% 100%/cover
+        @media screen and (max-width: 1024px)
+          background: url('../img/boy-left-tab.jpg') no-repeat 100% 100%/cover
+        @media screen and (max-width: 768px)
+          background: url('../img/boy-left-tab-s.jpg') no-repeat 100% 100%/cover
+        @media screen and (max-width: 500px)
+          background: url('../img/boy-left-mob.jpg') no-repeat 100% 100%/cover
+        background-color: $white
+      &__container
+        width: 675px
+        align-self: flex-end
+        padding-top: 36px
+        margin-right: 122px
+      &__title
+        display: flex
+        margin-bottom: 25px
+        &-item
+          font-family: $font-suisse-semb
+          font-size: 24px
+          line-height: 30.5px
+          letter-spacing: 0.72px
+          color: $blue
+          text-transform: uppercase
+          border: 1px solid #FF267E
+          &:nth-child(1)
+            padding: 12px 50px 10px
+            margin-right: 18px
+          &:nth-child(2)
+            cursor: pointer
+            padding: 12px 26px 10px
+            background-color: $magenta
+            color: $white
+            transition: all 0.3s ease
+            &:hover
+              background-color: $violet
+              color: $magenta
+      &__head
+        display: flex
+        &-col
+          display: flex
+          justify-content: center
+          align-items: center
+          font-family: $font-suisse-semb
+          font-size: 24px
+          line-height: 30.6px
+          letter-spacing: 0.72px
+          color: $blue
+          height: 46px
+          border: 1px solid $magenta
+          border-top: none
+          padding-bottom: 10px
+          &:nth-child(1)
+            width: 130px
+          &:nth-child(2)
+            width: 259px
+          &:nth-child(3)
+            width: 285px
+      &__body
+        &-col
+          display: flex
+          justify-content: center
+          align-items: center
+          border-left: 1px solid $magenta
+          border-right: 1px solid $magenta
+          &:nth-child(1)
+            width: 130px
+            padding-left: 42px
+          &:nth-child(2)
+            width: 259px
+          &:nth-child(3)
+            width: 285px
+          &.yourPlace
+            position: relative
+            &::before
+              position: absolute
+              content: "(Ti)"
+              width: 61px
+              height: 24px
+              left: 14px
+              top: 0
+              color: $magenta
+      &__row
+        display: flex
+        font-family: $font-a_LCDNova
+        color: $blue
+        font-size: 24px
+        line-height: 38px
+        letter-spacing: 0.72px
+        text-transform: uppercase
+        &:nth-child(odd):nth-child(-n+10)
+            background: rgba(217, 217, 217, 0.40)
+        &:nth-child(10)
+          border-bottom: 1px solid $magenta
+      &__winner
+        position: relative
+        &:before
+          position: absolute
+          content: ""
+          background: url('../img/favbet-icon.svg') no-repeat 0 0/cover
+          width: 28px
+          height: 24px
+          left: 26px
+          top: 5px
+      &__you
+        background: $violet
+  &__stadium
+    background-color: $white
+    display: flex
+    flex-direction: column
+    width: 100%
+    padding-bottom: 30px
+    &-cont
+      margin: 0 auto
+      width: 83%
+    &-top
+      display: flex
+    &-bottom
+      color: $blue
+      font-family: $font-suisse-semb
+      font-size: 76px
+      line-height: 105%
+      letter-spacing: 3.8px
+      text-transform: uppercase
+
+
+
+
+
+
+
+
+
+//.container
+//  //max-width: 1290px
+//  width: 100%
+//  position: relative
+//  margin: 0 auto
+//  background: url("../img/bg-desk.jpg") no-repeat 100% 0/contain
+//  @media screen and (max-width: 600px)
+//    background: url('../img/bg-mob.jpg') no-repeat 50% 0/contain
+//  @media screen and (max-width: 1024px)
+//    background: url("../img/bg-tab.jpg") no-repeat 50% 0%/contain
+//  @media (max-width: 1025px)
+//    background: url("../img/bg-desk.jpg") no-repeat 100% 0/contain
+//.promotion
+//  position: relative
+//  overflow-x: hidden
+//  &__h2
+//    font-family: $font-suisse-bold
+//    color: $magenta
+//    font-size: 48px
+//    line-height: 48px
+//    text-transform: uppercase
+//    text-align: center
+//    margin-bottom: 50px
+//  &__info
+//    display: flex
+//    position: relative
+//    max-width: 1290px
+//    margin: 0 auto
+//    &-left
+//      margin-right: -118px
+//      padding-top: 33px
+//      display: flex
+//      flex-direction: column
+//      z-index: 1
+//    &-right
+//      max-width: 743px
+//      position: relative
+//      z-index: 1
+//      padding-top: 20px
+//  &__star
+//    position: absolute
+//    top: 0
+//    width: 390px
+//    left: 25%
+//    animation-name: blink
+//    animation-timing-function: ease-in-out
+//    animation-duration: 1.2s
+//    animation-iteration-count: infinite
+//  &__logo
+//    width: 661px
+//    height: 169px
+//    align-self: flex-end
+//    margin-bottom: 70px
+//    margin-left: 53px
+//  &__txt
+//    display: flex
+//    flex-direction: column
+//    margin-bottom: 85px
+//    &-btn
+//      margin-left: 153px
+//  &__title
+//    display: flex
+//    flex-direction: column
+//    margin-bottom: 18px
+//    align-self: center
+//    &-item
+//      color: $magenta
+//      font-size: 80px
+//      line-height: 70px
+//      font-family: $font-suisse-bold
+//      text-transform: uppercase
+//      &:nth-child(1)
+//        color: $white
+//        font-size: 84px
+//        transform: translateX(-100%)
+//        animation: slideInLeft 1s forwards
+//        opacity: 0
+//      &:nth-child(2)
+//        align-self: center
+//        transform: translateX(100%)
+//        animation: slideInRight 1s forwards
+//        opacity: 0
+//      &:nth-child(3)
+//        transform: translateX(100%)
+//        animation: slideInRight 1s forwards
+//        opacity: 0
+//  &__date
+//    display: flex
+//    flex-direction: column
+//    &-item
+//      color: $magenta
+//      font-size: 20px
+//      font-family: $font-suisse-bold
+//      text-transform: uppercase
+//      padding: 9px 16px 7px
+//      border-radius: 5px
+//      width: max-content
+//      animation: fadeIn 1.5s ease-in forwards
+//      &:nth-child(1)
+//        color: $light-blue
+//        align-self: center
+//        border: 4px solid #47D2FF
+//        box-shadow: 0px 2px 3px #29ABE2, inset 0px 0px 5px #29ABE2, inset 0px 3px 5px #29ABE2
+//        text-shadow: 1px 1px 3px #29ABE2
+//        margin-bottom: 6px
+//      &:nth-child(2)
+//        margin-left: 100px
+//        border: 4px solid $magenta
+//        box-shadow: 0px 2px 3px #FF7BB16B, inset 0px 0px 5px #FF7BB16B, inset 0px 3px 5px #FF7BB16B
+//        text-shadow: 1px 1px 3px #FF7BB16B
+//
+//  &__regBtn
+//    padding: 31px 74px 27px
+//    border-radius: 4px
+//    background: $green
+//    box-shadow: 0px 0px 23px 0px #05C489
+//    font-size: 24px
+//    font-family: $font-suisse-semb
+//    color: $blue
+//    letter-spacing: 1.92px
+//    text-transform: uppercase
+//    display: block
+//    width: max-content
+//    &:hover
+//      background-color: $green-hover
+//      transition: all 0.3s ease
+//      box-shadow: 0px 0px 23px 0px #05b37c
+//
+//  &__enterBtn
+//    padding: 29px 74px
+//    border-radius: 4px
+//    background: $gray-second
+//    color: $blue
+//    box-shadow: 0px 0px 23px 0px #FFF
+//    display: flex
+//    justify-content: center
+//    align-items: center
+//    font-family: $font-suisse-semb
+//    font-size: 24px
+//    letter-spacing: 1.92px
+//    text-transform: uppercase
+//    margin-left: 40px
+//    &:hover
+//      background-color: $gray-second-hover
+//
+//  &__instructions
+//    max-width: 1156px
+//    margin: -110px auto 115px
+//    z-index: 2
+//    position: relative
+//    &-container
+//      display: flex
+//      justify-content: space-between
+//      margin-bottom: 60px
+//    &-btn
+//      margin: 0 auto 60px
+//  &__step
+//    display: flex
+//    position: relative
+//    border-radius: 8px
+//    padding: 9px 20px 7px 90px
+//    background-color: $violet
+//    width: 352px
+//    &:nth-child(1)
+//      .promotion__step-number
+//        animation-delay: 2s
+//    &:nth-child(2)
+//      .promotion__step-number
+//        animation-delay: 4s
+//    &:nth-child(3)
+//      .promotion__step-number
+//        animation-delay: 6s
+//    &-number
+//      width: 93px
+//      position: absolute
+//      left: -11px
+//      top: -14px
+//      animation: jump 2s ease-in-out infinite
+//      animation-iteration-count: 1
+//    &-text
+//      display: flex
+//      flex-direction: column
+//      .step
+//        &-top
+//          font-family: $font-suisse-bold
+//          color: $magenta
+//          font-size: 24px
+//          text-transform: uppercase
+//        &-bottom
+//          font-family: $font-suisse-regular
+//          color: $gray
+//          font-size: 24px
+//  &__winnings
+//    display: flex
+//    flex-direction: column
+//    max-width: 1325px
+//    margin: 0 auto
+//    position: relative
+//    &::after
+//      display: block
+//      content: ""
+//      position: absolute
+//      top: 66px
+//      width: 200%
+//      height: 500px
+//      right: -300px
+//      z-index: -1
+//      background: url("../img/spiral.svg") no-repeat 100% 0/contain
+//  .prize
+//    display: flex
+//    justify-content: space-between
+//    padding: 0 195px
+//    align-items: flex-end
+//    position: relative
+//    margin-top: -16px
+//    &__item
+//      display: flex
+//      flex-direction: column
+//      justify-content: center
+//      align-items: center
+//      &:nth-child(1)
+//        .prize__item-img
+//          width: 150px
+//      &:nth-child(2)
+//        .prize__item-img
+//          width: 170px
+//      &:nth-child(3)
+//        .prize__item-img
+//          width: 190px
+//      &:nth-child(4)
+//        .prize__item-img
+//          width: 210px
+//      &-money
+//        font-family: $font-suisse-bold
+//        font-size: 48px
+//        text-shadow: 0px 2px 10.2px #00B3FF, 0px 2px 23.3px #0679AA
+//        letter-spacing: -2.4px
+//        text-transform: uppercase
+//        color: $light-blue
+//      &-ftd
+//        font-family: $font-suisse-bold
+//        font-size: 36px
+//        letter-spacing: -1.8px
+//        text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.25)
+//        color: $gray
+//    &-dollar
+//      position: absolute
+//      width: 1029px
+//      left: -788px
+//      bottom: -338px
+//    &-procent
+//      position: absolute
+//      width: 1220px
+//      right: -959px
+//      bottom: -779px
+//  &__bg
+//    &-bottom
+//      width: 100%
+//      height: 1145px
+//      position: absolute
+//      bottom: 0
+//      z-index: -1
+//      background: url("../img/bg-bottom-desk.jpg") no-repeat 0 43%/cover
+//      @media screen and (max-width: 600px)
+//        background: url('../img/bg-bottom-mob.jpg') no-repeat 0 43%/contain
+//      @media screen and (max-width: 1024px)
+//        background: url("../img/bg-bottom-tab.jpg") no-repeat 0 43%/contain
+//      @media (max-width: 1025px)
+//        background: url("../img/bg-bottom-desk.jpg") no-repeat 0 43%/cover
+//  &__conditions
+//    display: flex
+//    flex-direction: column
+//    max-width: 1136px
+//    margin: 45px auto 0
+//  &__terms
+//    display: flex
+//    flex-wrap: wrap
+//    list-style: none
+//    justify-content: space-between
+//    &-item
+//      min-width: 548px
+//      max-width: 548px
+//      min-height: 120px
+//      max-height: max-content
+//      padding: 12px 42px 24px 101px
+//      background-color: $violet
+//      flex: 0 0 50%
+//      position: relative
+//      margin-bottom: 40px
+//      border-radius: 8px
+//    &-img
+//      position: absolute
+//      left: -30px
+//      top: -13px
+//      width: 108px
+//    &-txt
+//      //padding: 0 115px 40px
+//      font-family: $font-suisse-regular
+//      font-size: 24px
+//      color: $gray
+//  &__summary
+//    width: 100%
+//    padding: 20px 0 300px
+//    position: relative
+//    &-container
+//      display: flex
+//      justify-content: space-between
+//      //margin: 50px 0
+//      margin: 0 auto 50px
+//      max-width: 1136px
+//    &-item
+//      min-width: 256px
+//      max-width: 256px
+//      background-color: $violet
+//      padding: 17px 20px 16px
+//      display: flex
+//      flex-direction: column
+//      justify-content: space-around
+//      align-items: center
+//      transition: all 0.3s ease
+//      border-radius: 8px
+//      z-index: 1
+//      &:hover
+//        background-color: $violet-hover
+//        .item
+//          &-top
+//            color: $white
+//    .item
+//      display: flex
+//      flex-direction: column
+//      &-top
+//        color: $gray
+//        font-family: $font-suisse-regular
+//        font-size: 24px
+//        text-align: center
+//        span
+//          text-decoration: underline
+//      &-bottom
+//        color: $magenta
+//        font-family: $font-suisse-bold
+//        letter-spacing: 0.96px
+//        font-size: 24px
+//        text-transform: uppercase
+//        white-space: nowrap
+//      &-img
+//        margin-bottom: 10px
+//        &.tg
+//          width: 23px
+//          height: 19px
+//          background: url('../img/telegram-icon.svg') no-repeat 100% 100%/cover
+//        &.fb
+//          width: 28px
+//          height: 21px
+//          background: url('../img/fav-icon.svg') no-repeat 100% 100%/cover
+//    &-buttons
+//      display: flex
+//      justify-content: center
+//    &-emoji
+//      position: absolute
+//      left: -489px
+//      top: -610px
+//      max-width: 1051px
+//    &-cocktail
+//      position: absolute
+//      right: 0
+//      top: 127px
+//      max-width: 450px
+//
+//
+//@keyframes slideInLeft
+//  0%
+//    opacity: 0
+//    transform: translateX(-100%)
+//  100%
+//    opacity: 1
+//    transform: translateX(0)
+//
+//@keyframes slideInRight
+//  0%
+//    opacity: 0
+//    transform: translateX(100%)
+//  100%
+//    opacity: 1
+//    transform: translateX(0)
+//
+//@keyframes fadeIn
+//  0%
+//    opacity: 0
+//  100%
+//    opacity: 1
+//
+//@keyframes jump
+//  0%, 100%
+//    transform: translateY(0)
+//  25%, 75%
+//    transform: translateY(-15px)
+//  50%
+//    transform: translateY(0px)
+//
+//@keyframes blink
+//  50%
+//    opacity: 0
+//  100%
+//    opacity: 1
+
+
+
