@@ -427,8 +427,10 @@
         letter-spacing: 1.6px
     &__terms
       .rules
-        //padding: 48px
         margin: 48px auto 96px
+        &-txt
+          font-size: 14px
+          line-height: 20px
 
 @media screen and (max-width: 930px)
   .contest
@@ -738,6 +740,13 @@
               width: 148px
             &:nth-child(3)
               width: 119px
+            &.yourPlace
+              &::before
+                left: 8px
+        &__winner
+          &::before
+            left: 16px
+
 
 @media screen and (max-width: 400px)
   .contest
