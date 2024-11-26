@@ -708,31 +708,44 @@
           height: 840px
         &__winners
           width: 100%
-          overflow-x: auto
           border-radius: 0
-          &::-webkit-scrollbar
-            width: 7px
-            display: block
-          &::-webkit-scrollbar-thumb
-            background-color: $magenta
-          &::-webkit-scrollbar-track
-            background-color: $light-magenta
-          scrollbar-color: $magenta $light-magenta
-          scrollbar-width: thin
       .winners
-        width: 500px
+        width: 100%
         &__closeBtn
-          right: 8px
+          right: 2px
         &__title
-          width: 500px
+          width: 100%
+        &__row
+          width: 100%
         &__head
           margin-left: 10px
+          width: 100%
+          padding-right: 28px
+          margin-right: 0
+          &-col
+            font-size: 14px
+            &:nth-child(1)
+              width: 18%
+            &:nth-child(2)
+              width: 20%
+            &:nth-child(3)
+              width: 20%
+            &:nth-child(4)
+              width: 42%
         &__body
-          margin-left: 10px
-          margin-right: 16px
-
-        //&__closeBtn
-        //  right: 5%
+          margin: 0 7px 0 10px
+          padding-right: 0
+          &-col
+            font-size: 12px
+            &:nth-child(1)
+              width: 18%
+            &:nth-child(2)
+              width: 20%
+            &:nth-child(3)
+              width: 20%
+            &:nth-child(4)
+              width: 42%
+              font-size: 11px
 
 @media screen and (max-width: 500px)
   .contest
@@ -858,8 +871,22 @@
       .results
         &__head
           margin: 0 auto
+          &-col
+            &:nth-child(1)
+              width: 25%
+            &:nth-child(2)
+              width: 37%
+            &:nth-child(3)
+              width: 38%
         &__body
           margin: 0 auto
+          &-col
+            &:nth-child(1)
+              width: 25%
+            &:nth-child(2)
+              width: 37%
+            &:nth-child(3)
+              width: 38%
         &__container
           width: 99%
           overflow-x: auto
@@ -874,8 +901,9 @@
             background-color: $light-magenta
         &__title,
         &__head,
-        &__body
-          width: 330px
+        &__body,
+        &__row
+          width: 100%
         &__title
           &-item
             &:nth-child(1)
@@ -906,13 +934,28 @@
           font-size: 17px
           padding: 0 50px
           line-height: 20px
-    &__leaderboard
-      .results
-        &__head
-          &-col
-            &:nth-child(1)
-              width: 79px
+    //&__leaderboard
+    //  .results
+    //    &__head
+    //      &-col
+    //        &:nth-child(1)
+    //          width: 79px
 
+@media screen and (max-width: 330px)
+  .contest
+    &__leaderboard
+      .winners
+        &__head
+          padding-right: 17px
+          &-col
+            font-size: 12px
+            line-height: 14px
+        &__body
+          &-col
+            font-size: 10px
+            line-height: 13px
+            &:nth-child(4)
+              font-size: 9px
 
 @media screen and (max-width: 302px)
   .contest
@@ -921,3 +964,9 @@
         &__title
           &-item
             font-size: 17px
+        &__head
+          &-col
+            font-size: 17px
+        &__body
+          &-col
+            font-size: 16px
