@@ -318,7 +318,7 @@
       margin-top: 113px
       &-tickets
         &::before
-          width: 550px
+          width: 591px
     &__leaderboard
       .results
         &__wrapp
@@ -338,7 +338,6 @@
           &__btn
             &-cont
               height: 47px
-
     &__experience
       height: 650px
     &__stadium
@@ -353,6 +352,10 @@
 
 @media screen and (max-width: 1000px)
   .contest
+    &__btn
+      &.intro-btn
+        bottom: 35px
+        width: 360px
     &__experience
       height: 550px
       &-wrapper
@@ -370,26 +373,6 @@
             font-size: 26px
             line-height: 27.3px
             letter-spacing: 1.3px
-    &__instructions
-      margin-top: 80px
-      &-wrapper
-        top: 20%
-        height: 67%
-      &-tickets
-        flex-direction: column
-        justify-content: center
-        align-items: center
-        &::before
-          display: none
-        &::after
-          content: ""
-          position: absolute
-          background-color: $magenta
-          width: 4px
-          height: 70%
-          top: 50px
-          left: calc(50% - 2px)
-          z-index: -1
     &__leaderboard
       .results
         &__wrapp
@@ -432,6 +415,36 @@
           font-size: 14px
           line-height: 20px
 
+@media screen and (max-width: 1000px) and (min-width: 769px)
+  .contest
+    &__instructions
+      width: 97%
+      &-tickets
+        .ticket
+          &__item
+            width: 250px
+            height: 367px
+            &:nth-child(1)
+              .ticket__item-center
+                padding-top: 10px
+            &:nth-child(2)
+              .ticket__item-center
+                padding-top: 13px
+            &:nth-child(3)
+              .ticket__item-top
+                padding-bottom: 31px
+              .ticket__item-center
+                padding-top: 1px
+            &-top
+              font-size: 16px
+              line-height: 19px
+              padding: 22px 35px 40px
+            &-center
+              font-size: 16px
+              padding: 50px 20px 0
+    &::before
+      width: 500px
+
 @media screen and (max-width: 930px)
   .contest
     &__title
@@ -454,6 +467,8 @@
         left: 18px
       &::after
         right: 18px
+    &__instructions
+      margin-top: 58px
     &__leaderboard
       .results
         .title
@@ -465,17 +480,6 @@
 
 @media screen and (max-width: 850px)
   .contest
-    &__intro
-      aspect-ratio: 0.78
-      width: 100%
-      height: auto
-    &__btn
-      &.intro-btn
-        margin: 0 auto
-        right: 50%
-        transform: translateX(50%)
-      &-cont
-        height: 54px
     &__experience
       &-wrapper
         width: 98%
@@ -484,6 +488,8 @@
         .experience
           &-img
             width: 61%
+    &__instructions
+      margin-top: 100px
     &__leaderboard
       .results
         width: 98%
@@ -497,6 +503,41 @@
       &-bottom
         width: 92%
         margin-left: 20px
+
+@media screen and (max-width: 768px)
+  .contest
+    &__intro
+      aspect-ratio: 0.78
+      width: 100%
+      height: auto
+    &__btn
+      &.intro-btn
+        margin: 0 auto
+        right: 50%
+        transform: translateX(50%)
+      &-cont
+        height: 54px
+    &__instructions
+      margin-top: 80px
+      &-wrapper
+        top: 20%
+        height: 67%
+      &-tickets
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        &::before
+          display: none
+        &::after
+          content: ""
+          position: absolute
+          background-color: $magenta
+          width: 4px
+          height: 70%
+          top: 50px
+          left: calc(50% - 2px)
+          z-index: -1
+
 
 @media screen and (max-width: 758px)
   .contest
