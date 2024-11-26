@@ -160,11 +160,14 @@
             &:nth-child(3)
               width: 167px
       .winners
+        &__row
+          width: 444px
         &__title
           font-size: 19px
           margin-bottom: 5px
         &__head
           margin: 0 34px 0 20px
+          width: 444px
           &-col
             font-size: 17px
             padding-bottom: 0
@@ -275,6 +278,10 @@
                 padding: 9px 39px 0
             &-top
               padding-top: 30px
+    &__terms
+      .rules
+        padding: 8px 37px 5px
+
 
 @media screen and (max-width: 1290px)
   .contest
@@ -810,8 +817,20 @@
         width: 90%
     &__terms
       .rules
-        width: 98%
-        padding: 21px 15px 15px
+        width: 94%
+        &-title
+          font-size: 18px
+          &::before
+            left: 170px
+            top: 33%
+        &[open]
+          .rules-title
+            position: relative
+            &::before
+              transform: translateY(-9%) rotate(180deg)
+            &::after
+              width: 160px
+              top: 36px
 
 @media screen and (max-width: 388px)
   .contest
